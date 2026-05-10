@@ -11,10 +11,10 @@ def get_image_files(directory):
     return [f for f in os.listdir(directory) if f.lower().endswith(extensions)]
 
 def send_photo(file_path):
-    url = f"https://api.telegram.org/bot%7BBOT_TOKEN%7D/sendPhoto"
+    url = f"https://api.telegram.org/bot{BOTTOKEN}/sendPhoto"
     try:
         with open(file_path, 'rb') as photo:
-            payload = {'chat_id': CHAT_ID}
+            payload = {'chat_id': CHATID}
             files = {'photo': photo}
             response = requests.post(url, data=payload, files=files)
             return response.json()
@@ -41,17 +41,5 @@ def start_extraction():
         print(f"Sending: {image}")
         send_photo(full_path)
 
-if name == "main":
+if __name__ == "__main__":
     start_extraction()
-:fire:
-Click to react
-:heart:
-Click to react
-:100:
-Click to react
-Add Reaction
-Edit
-Forward
-More
-
-Message #المحفوضات
